@@ -35,14 +35,12 @@ wss.on('connection', (ws) => {
             console.log('Inserting data:', data);
         
             // Inserta el pedido en la colección
-            const result = await collection.insertOne(data);
-            console.log('Pedido guardado en MongoDB:', result.insertedId);
+            await collection.insertOne(data);
         } catch (error) {
             console.error('Error al guardar el pedido en MongoDB:', error);
         } finally {
             await dbClient.close();
         }
-        
 
         // Envía el mensaje a los clientes conectados
         wss.clients.forEach((client) => {
