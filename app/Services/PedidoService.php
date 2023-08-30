@@ -2,9 +2,7 @@
 
 namespace App\Services;
 
-use App\Models\Cuenta;
 use App\Models\Pedido;
-use App\Events\PedidoCreado;
 
 class PedidoService
 {

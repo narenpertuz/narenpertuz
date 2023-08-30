@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use App\Services\PedidoService;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Http;
-use BeyondCode\LaravelWebSockets\Facades\WebSocketsRouter;
 
 class PedidoController extends Controller
 {
